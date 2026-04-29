@@ -1,0 +1,43 @@
+!! [Menu Settings]
+menu.title.bg: Flat Solid
+menu.title.bg.color: #f8f7f3
+menu.title.text.color: #2d2d2d
+menu.title.text.justify: center
+
+menu.items.bg: Flat Solid
+menu.items.bg.color: #f8f7f3
+menu.items.text.color: #2d2d2d
+menu.items.disabled.text.color: #888888
+
+menu.items.active.bg: Flat Solid
+menu.items.active.bg.color: #d4cfbb
+menu.items.active.text.color: #2d2d2d
+
+window.inactive.label.bg: Parentrelative
+window.inactive.label.text.color: #ffffff
+
+!! [OSD Settings - Alt+Tab menu]
+osd.bg: Flat Solid
+osd.bg.color: #f8f7f3
+osd.label.bg: Flat Solid
+osd.label.bg.color: #f8f7f3
+osd.label.text.color: #2d2d2d
+
+osd.hilight.bg: Flat Solid
+osd.hilight.bg.color: #d4cfbb
+
+osd.unhilight.bg: Flat Solid
+osd.unhilight.bg.color: #888888
+
+osd.border.color: #000000
+
+!! [Border Settings]
+border.width: 3
+window.active.border.color: #000000
+window.inactive.border.color: #2d2d2d
+menu.border.color: #000000
+menu.overlap: 15
+
+!! Font settings
+menu.items.font: shadow=n
+menu.title.text.font: shadow=n

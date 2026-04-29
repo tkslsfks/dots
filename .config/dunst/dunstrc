@@ -1,0 +1,73 @@
+[global]
+    ### Display ###
+    # Monitor to display notifications on (0 = primary)
+    monitor = 0
+    follow = mouse
+    
+    # Geometry: width x height + x_offset + y_offset
+    geometry = "300x50-10+30"
+    
+    # Window transparency (0 = opaque, 100 = fully transparent)
+    transparency = 0
+    
+    # Padding and spacing
+    padding = 8
+    horizontal_padding = 8
+    separator_height = 2
+    separator_color = frame
+    
+    # Frame/border settings
+    frame_width = 3
+    frame_color = "#000000"
+    
+    ### Corner radius ###
+    corner_radius = 0
+    progress_bar_corner_radius = 0
+    icon_corner_radius = 0
+    
+    ### Font ###
+    font = MxPlusToshibaSat8x14 12
+    
+    ### Colors ###
+    background = "#f8f7f3"
+    foreground = "#2d2d2d"
+    
+    ### Formatting ###
+    format = "<b>%s</b>\n%b"
+    alignment = left
+    vertical_alignment = center
+    show_age_threshold = 60
+    word_wrap = yes
+    ellipsize = middle
+    ignore_newline = no
+    
+    ### Stacking & Duplicates ###
+    stack_duplicates = true
+    hide_duplicate_count = true
+    show_indicators = yes
+    
+    ### History ###
+    sticky_history = yes
+    history_length = 20
+    
+    ### Urgency settings ###
+    # Low urgency - stays longer, less prominent
+    [urgency_low]
+        background = "#f8f7f3"
+        foreground = "#2d2d2d"
+        timeout = 5
+        frame_color = "#000000"
+    
+    # Normal urgency - default
+    [urgency_normal]
+        background = "#f8f7f3"
+        foreground = "#2d2d2d"
+        timeout = 5
+        frame_color = "#000000"
+    
+    # Critical urgency - stays until dismissed
+    [urgency_critical]
+        background = "#f8f7f3"
+        foreground = "#2d2d2d"
+        timeout = 0
+        frame_color = "#000000"

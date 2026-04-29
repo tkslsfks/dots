@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+
+    <menu id="root-menu" label="Openbox 3">
+        <menu id="applications" label="applications" execute="xdg_menu --format openbox3-pipe" />
+        <item label="terminal">
+            <action name="Execute">
+                <command>st</command>
+            </action>
+    	</item>
+        <item label="file manager">
+            <action name="Execute">
+                <command>st -e yazi</command>
+            </action>
+        </item>
+	<separator />
+        <item label="suspend">
+            <action name="Execute">
+                <command>systemctl suspend</command>
+            </action>
+	</item>
+        <item label="log out">
+            <action name="Execute">
+                <command>openbox --exit</command>
+            </action>
+        </item>
+        <item label="reboot">
+            <action name="Execute">
+                <command>systemctl reboot</command>
+            </action>
+        </item>
+
+        <item label="shutdown">
+            <action name="Execute">
+                <command>systemctl poweroff</command>
+            </action>
+        </item>
+    </menu>
+
+
+</openbox_menu>

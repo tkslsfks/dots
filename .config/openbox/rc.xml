@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_config xmlns="http://openbox.org/3.4/rc">
+  <!-- Theme -->
+  <theme>
+    <name>sero</name>
+    <cornerRadius>0</cornerRadius>
+    <font place="MenuHeader">
+      <name>MxPlus ToshibaSat 8x14</name>
+      <size>12</size>
+      <weight>normal</weight>
+      <slant>normal</slant>
+    </font>
+    <font place="MenuItem">
+      <name>MxPlus ToshibaSat 8x14</name>
+      <size>12</size>
+      <weight>normal</weight>
+      <slant>normal</slant>
+    </font>
+    <font place="ActiveOnScreenDisplay">
+      <name>MxPlus ToshibaSat 8x14</name>
+      <size>12</size>
+      <weight>normal</weight>
+      <slant>normal</slant>
+    </font>
+    <font place="InactiveOnScreenDisplay">
+      <name>MxPlus ToshibaSat 8x14</name>
+      <size>12</size>
+      <weight>normal</weight>
+      <slant>normal</slant>
+    </font>
+    <keepBorder>yes</keepBorder>
+    <animateIconify>yes</animateIconify>
+    <titleLayout>NLIMC</titleLayout>
+    <font place="ActiveWindow">
+      <name>Sans</name>
+      <size>8</size>
+      <weight></weight>
+      <slant></slant>
+    </font>
+    <font place="InactiveWindow">
+      <name>Sans</name>
+      <size>8</size>
+      <weight></weight>
+      <slant></slant>
+    </font>
+  </theme>
+  <!-- Desktops / Workspaces -->
+  <desktops>
+    <number>4</number>
+    <firstdesk>1</firstdesk>
+    <names>
+      <name>1</name>
+      <name>2</name>
+      <name>3</name>
+      <name>4</name>
+    </names>
+    <popupTime>875</popupTime>
+  </desktops>
+  <!-- Resize -->
+  <resize>
+    <drawContents>yes</drawContents>
+    <popupShow>Nonpixel</popupShow>
+    <popupPosition>Center</popupPosition>
+    <popupFixedPosition>
+      <x>10</x>
+      <y>10</y>
+    </popupFixedPosition>
+  </resize>
+  <!-- Focus -->
+  <focus>
+    <focusNew>yes</focusNew>
+    <followMouse>yes</followMouse>
+    <focusDelay>0</focusDelay>
+    <raiseOnFocus>no</raiseOnFocus>
+    <underMouse>no</underMouse>
+    <focusLast>yes</focusLast>
+  </focus>
+  <!-- Placement -->
+  <placement>
+    <policy>UnderMouse</policy>
+    <center>no</center>
+    <monitor>Any</monitor>
+    <primaryMonitor/>
+  </placement>
+  <!-- Keyboard bindings -->
+  <keyboard>
+    <!-- System keybindings -->
+    <keybind key="W-q">
+      <action name="Close"/>
+    </keybind>
+    <keybind key="W-x">
+      <action name="Iconify"/>
+    </keybind>
+    <keybind key="W-S-r">
+      <action name="Reconfigure"/>
+    </keybind>
+    <keybind key="A-Tab">
+      <action name="NextWindow">
+        <finalactions>
+          <action name="Focus"/>
+          <action name="Raise"/>
+        </finalactions>
+      </action>
+    </keybind>
+    <!-- Applications -->
+    <keybind key="W-Return">
+      <action name="Execute">
+        <command>st</command>
+      </action>
+    </keybind>
+    <keybind key="W-d">
+      <action name="Execute">
+        <command>~/.config/openbox/scripts/dmenu.sh</command>
+      </action>
+    </keybind>
+    <keybind key="W-e">
+      <action name="Execute">
+        <command>st -e yazi</command>
+      </action>
+    </keybind>
+    <keybind key="W-b">
+      <action name="Execute">
+        <command>firefox</command>
+      </action>
+    </keybind>
+    <keybind key="W-t">
+      <action name="Execute">
+        <command>telegram-desktop</command>
+      </action>
+    </keybind>
+    <!-- Special terminals -->
+    <keybind key="C-S-Escape">
+      <action name="Execute">
+        <command>st -e htop</command>
+      </action>
+    </keybind>
+    <keybind key="C-A-Delete">
+      <action name="Execute">
+        <command>openbox --exit</command>
+      </action>
+    </keybind>
+    <keybind key="W-KP_Enter">
+      <action name="Execute">
+        <command>st -e calc</command>
+      </action>
+    </keybind>
+    <keybind key="W-v">
+      <action name="Execute">
+        <command>pavucontrol</command>
+      </action>
+    </keybind>
+    <!-- Window management -->
+    <keybind key="W-f">
+      <action name="ToggleFullscreen"/>
+    </keybind>
+    <keybind key="W-space">
+      <action name="ToggleMaximize"/>
+    </keybind>
+    <!-- Workspace navigation -->
+    <keybind key="W-1">
+      <action name="Desktop">
+        <desktop>1</desktop>
+      </action>
+    </keybind>
+    <keybind key="W-2">
+      <action name="Desktop">
+        <desktop>2</desktop>
+      </action>
+    </keybind>
+    <keybind key="W-3">
+      <action name="Desktop">
+        <desktop>3</desktop>
+      </action>
+    </keybind>
+    <keybind key="W-4">
+      <action name="Desktop">
+        <desktop>4</desktop>
+      </action>
+    </keybind>
+    <!-- Move windows to workspaces -->
+    <keybind key="W-S-1">
+      <action name="SendToDesktop">
+        <desktop>1</desktop>
+        <follow>yes</follow>
+      </action>
+    </keybind>
+    <keybind key="W-S-2">
+      <action name="SendToDesktop">
+        <desktop>2</desktop>
+        <follow>yes</follow>
+      </action>
+    </keybind>
+    <keybind key="W-S-3">
+      <action name="SendToDesktop">
+        <desktop>3</desktop>
+        <follow>yes</follow>
+      </action>
+    </keybind>
+    <keybind key="W-S-4">
+      <action name="SendToDesktop">
+        <desktop>4</desktop>
+        <follow>yes</follow>
+      </action>
+    </keybind>
+    <!-- Multimedia keys -->
+    <keybind key="XF86AudioMute">
+      <action name="Execute">
+        <command>pactl set-sink-mute @DEFAULT_SINK@ toggle</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioLowerVolume">
+      <action name="Execute">
+        <command>pactl set-sink-volume @DEFAULT_SINK@ -5%</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioRaiseVolume">
+      <action name="Execute">
+        <command>pactl set-sink-volume @DEFAULT_SINK@ +5%</command>
+      </action>
+    </keybind>
+    <keybind key="XF86MonBrightnessUp">
+      <action name="Execute">
+        <command>brightnessctl -e4 -n2 set 5%+</command>
+      </action>
+    </keybind>
+    <keybind key="XF86MonBrightnessDown">
+      <action name="Execute">
+        <command>brightnessctl -e4 -n2 set 5%-</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioNext">
+      <action name="Execute">
+        <command>playerctl next</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioPause">
+      <action name="Execute">
+        <command>playerctl play-pause</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioPlay">
+      <action name="Execute">
+        <command>playerctl play-pause</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioPrev">
+      <action name="Execute">
+        <command>playerctl previous</command>
+      </action>
+    </keybind>
+    <keybind key="Print">
+      <action name="Execute">
+        <command>~/.config/openbox/scripts/print.sh</command>
+      </action>
+    </keybind>
+    <keybind key="W-S-s">
+      <action name="Execute">
+        <command>~/.config/openbox/scripts/printregion.sh</command>
+      </action>
+    </keybind>
+  </keyboard>
+  <!-- Mouse bindings -->
+  <mouse>
+    <context name="Desktop">
+      <mousebind button="Right" action="Press">
+        <action name="ShowMenu">
+          <menu>root-menu</menu>
+        </action>
+      </mousebind>
+    </context>
+    <context name="Desktop">
+      <mousebind button="Left" action="Press">
+        <action name="Focus"/>
+      </mousebind>
+    </context>
+    <context name="Desktop">
+      <mousebind button="Middle" action="Press">
+        <action name="Focus"/>
+      </mousebind>
+    </context>
+    <!-- Titlebar actions -->
+    <context name="Titlebar">
+      <!-- Move window by dragging titlebar -->
+      <mousebind button="Left" action="Drag">
+        <action name="Move"/>
+      </mousebind>
+      <!-- Double-click to maximize -->
+      <mousebind button="Left" action="DoubleClick">
+        <action name="ToggleMaximizeFull"/>
+      </mousebind>
+      <!-- Right-click for window menu -->
+      <mousebind button="Right" action="Press">
+        <action name="ShowMenu">
+          <menu>client-menu</menu>
+        </action>
+      </mousebind>
+      <!-- Middle click to lower window -->
+      <mousebind button="Middle" action="Press">
+        <action name="Unfocus"/>
+        <action name="Iconify"/>
+      </mousebind>
+    </context>
+    <!-- Resize window by dragging borders -->
+    <context name="Top">
+      <mousebind button="Left" action="Drag">
+        <action name="Resize"/>
+      </mousebind>
+    </context>
+    <context name="Bottom">
+      <mousebind button="Left" action="Drag">
+        <action name="Resize"/>
+      </mousebind>
+    </context>
+    <context name="Left">
+      <mousebind button="Left" action="Drag">
+        <action name="Resize"/>
+      </mousebind>
+    </context>
+    <context name="Right">
+      <mousebind button="Left" action="Drag">
+        <action name="Resize"/>
+      </mousebind>
+    </context>
+    <!-- Corners for resizing -->
+    <context name="TLCorner">
+      <mousebind button="Left" action="Drag">
+        <action name="Resize"/>
+      </mousebind>
+    </context>
+    <context name="TRCorner">
+      <mousebind button="Left" action="Drag">
+        <action name="Resize"/>
+      </mousebind>
+    </context>
+    <context name="BLCorner">
+      <mousebind button="Left" action="Drag">
+        <action name="Resize"/>
+      </mousebind>
+    </context>
+    <context name="BRCorner">
+      <mousebind button="Left" action="Drag">
+        <action name="Resize"/>
+      </mousebind>
+    </context>
+    <!-- Iconify action (minimize) -->
+    <context name="Iconify">
+      <mousebind button="Left" action="Press">
+        <action name="Iconify"/>
+      </mousebind>
+    </context>
+    <!-- Maximize action -->
+    <context name="Maximize">
+      <mousebind button="Left" action="Press">
+        <action name="ToggleMaximizeFull"/>
+      </mousebind>
+    </context>
+    <!-- Close action -->
+    <context name="Close">
+      <mousebind button="Left" action="Press">
+        <action name="Close"/>
+      </mousebind>
+    </context>
+    <!-- Super + click anywhere on window to move -->
+    <context name="Frame">
+      <mousebind button="W-Left" action="Drag">
+        <action name="Move"/>
+        <action name="Raise"/>
+      </mousebind>
+      <mousebind button="W-Right" action="Drag">
+        <action name="Resize"/>
+        <action name="Raise"/>
+      </mousebind>
+    </context>
+    <!-- Also works on client area (window content) -->
+    <context name="Client">
+      <mousebind button="W-Left" action="Drag">
+        <action name="Move"/>
+        <action name="Raise"/>
+      </mousebind>
+      <mousebind button="W-Right" action="Drag">
+        <action name="Resize"/>
+        <action name="Raise"/>
+      </mousebind>
+    </context>
+    <context name="Client">
+      <mousebind button="Left" action="Press">
+        <action name="Focus"/>
+        <action name="Raise"/>
+      </mousebind>
+    </context>
+    <context name="Titlebar">
+      <mousebind button="Left" action="Press">
+        <action name="Focus"/>
+        <action name="Raise"/>
+      </mousebind>
+    </context>
+    <doubleClickTime>200</doubleClickTime>
+    <dragThreshold>8</dragThreshold>
+    <screenEdgeWarpTime>400</screenEdgeWarpTime>
+  </mouse>
+  <!-- Menu configuration -->
+  <menu>
+    <showIcons>yes</showIcons>
+    <manageDesktops>yes</manageDesktops>
+    <hideDelay>200</hideDelay>
+    <middle>no</middle>
+    <submenuShowDelay>100</submenuShowDelay>
+    <submenuHideDelay>400</submenuHideDelay>
+    <applicationIcons>yes</applicationIcons>
+    <showDelay>0</showDelay>
+  </menu>
+  <!-- Applications / Window rules -->
+  <applications>
+    <application class="*">
+      <decor>no</decor>
+    </application>
+  </applications>
+  <resistance>
+    <strength>10</strength>
+    <screen_edge_strength>20</screen_edge_strength>
+  </resistance>
+  <margins>
+    <left>0</left>
+    <right>0</right>
+    <top>0</top>
+    <bottom>0</bottom>
+  </margins>
+  <dock>
+    <position>TopLeft</position>
+    <floatingX>0</floatingX>
+    <floatingY>0</floatingY>
+    <stacking>Above</stacking>
+    <direction>Vertical</direction>
+    <noStrut>no</noStrut>
+    <autoHide>no</autoHide>
+    <hideDelay>300</hideDelay>
+    <showDelay>300</showDelay>
+  </dock>
+</openbox_config>

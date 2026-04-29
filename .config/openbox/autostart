@@ -1,0 +1,12 @@
+# Apps
+
+# xsetroot -solid "#e1dbd4" &
+# nvidia-settings --load-config-only &
+feh --bg-scale ~/.config/openbox/wallpapers/Img26.jpg &
+~/.config/lemonbar/lemonbar.sh | lemonbar -g x14 -B "#000000" -F "#aaaaaa" -f "MxPlusToshibaSat8x14:size=12" -p &
+systemctl --user import-environment &
+picom -b &
+dunst &
+pa-notify -t 1 &
+[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1

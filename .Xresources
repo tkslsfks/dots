@@ -1,0 +1,44 @@
+XTerm.vt100.translations: #override \n\
+    Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+    Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
+
+XTerm.vt100.backarrowKey: false
+XTerm.ttyModes: erase ^?
+
+XTerm.vt100.background: #fdf6e3
+
+XTerm*faceName: MxPlus ToshibaSat 8x14
+xterm*faceSize: 12
+
+
+! black
+*.color0:       #04000f
+*.color8:       #2a2d49
+
+! red
+*.color1:       #a51723
+*.color9:       #e51919
+
+! green
+*.color2:       #00822f
+*.color10:      #41ea41
+
+! yellow
+*.color3:       #f95c22
+*.color11:      #f9d222
+
+! blue
+*.color4:       #000b89
+*.color12:      #0e6bb7
+
+! magenta
+*.color5:       #720033
+*.color13:      #ea7cc4
+
+! cyan
+*.color6:       #4485cf
+*.color14:      #7dbbff
+
+! white
+*.color7:       #7a8599
+*.color15:      #eff9ff
