@@ -1,0 +1,282 @@
+/**
+ * Bluecurve GTK 3/4 theme
+ * CSS rules for MATE UI elements.
+ *
+ * Copyright (C) 2024-2025 | neeeeow
+ * https://github.com/neeeeow/Bluecurve
+ *
+ * Forked from Blueshell:
+ *  Copyright (C) 2015-2016 | jpsb
+ *  Copyright (C) 2016-2018 | KlipKyle
+ *  Copyright (C) 2017-2018 | mrnhmath
+ *  Copyright (C) 2018 | Rakksor
+ *  https://github.com/Rakksor/Blueshell
+ *
+ * Some components of the following themes were used & modified:
+ *  Human GTK 3/4 theme:
+ *   Copyright (C) 2020-2024 | Fabrice Creuzot (luigifab)
+ *   https://github.com/luigifab/human-theme
+ *  TraditionalOK:
+ *   https://github.com/mate-desktop/mate-themes
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
+/********************************************/
+/*  Set padding in main panels             */
+/******************************************/
+
+/* Set menu bar padding to 0 */
+.mate-panel-menu-bar menubar {
+	padding: 0px;
+	background-image: none;
+	border: none;
+}
+
+.mate-panel-menu-bar menuitem {
+	padding: 3px 5px 3px 4px;
+} 
+
+PanelToplevel.horizontal.top > grid {
+	border-style: outset;
+	border-width: 0px 0px 1px 0px;
+	border-color: @medium_border_color;
+}
+
+PanelToplevel.horizontal.bottom > grid {
+	border-style: outset;
+	border-width: 1px 0px 0px 0px;
+	border-color: @medium_border_color;
+}
+
+PanelToplevel.vertical.left > grid {
+	border-style: outset;
+	border-width: 0px 1px 0px 0px;
+	border-color: @medium_border_color;
+}
+
+PanelToplevel.vertical.right > grid {
+	border-style: outset;
+	border-width: 0px 0px 0px 1px;
+	border-color: @medium_border_color;
+}
+
+/* Classic icon style */
+.mate-panel-menu-bar {
+	-PanelMenuBar-icon-visible: true;
+}
+
+/*********************************************/
+/* Panel buttons */
+/*********************************************/
+
+.mate-panel-menu-bar #tasklist-button,
+#PanelApplet > #showdesktop-button.toggle image {
+	background-color: @theme_bg_color;
+	padding: 0px;
+	border: 1px solid @darker_border_color;
+	box-shadow: inset -1px -1px @box_shadow_dark_color, inset 1px 1px @box_shadow_light_color;
+}
+
+.mate-panel-menu-bar #tasklist-button:checked, 
+.mate-panel-menu-bar #tasklist-button:active,
+.mate-panel-menu-bar #tasklist-button:active:focus,
+#PanelApplet > #showdesktop-button.toggle:checked image,
+#PanelApplet > #showdesktop-button.toggle:active image,
+#PanelApplet > #showdesktop-button.toggle:active:focus image {
+	background-color: @darker_color;
+	border: 1px solid @darker_border_color;
+	box-shadow: inset 1px 1px @box_shadow_dark_color, inset -1px -1px @box_shadow_light_color;
+}
+
+.mate-panel-menu-bar #tasklist-button:hover:not(:active),
+#PanelApplet > #showdesktop-button.toggle:hover:not(:active) image {
+	background-color: @prelight_color;
+	border: 1px solid @darker_border_color;
+	box-shadow: inset -1px -1px @box_shadow_dark_color, inset 1px 1px @box_shadow_light_color;
+}
+
+.mate-panel-menu-bar #tasklist-button:checked:hover,
+.mate-panel-menu-bar #tasklist-button:active:hover,
+#PanelApplet > #showdesktop-button.toggle:checked:hover image,
+#PanelApplet > #showdesktop-button.toggle:active:hover image {
+	box-shadow: inset 1px 1px @box_shadow_dark_color, inset -1px -1px @box_shadow_light_color;
+}
+
+/*****************************************/
+/*  Tasklist button padding  */
+/*****************************************/
+
+#tasklist-button box {
+	margin-right: 16px;
+}
+
+#tasklist-button label {
+	margin-right: -16px;
+	margin-left: -4px;
+}
+
+#tasklist-button image {
+	margin-left: -1px;
+}
+
+/******************************************/
+/* Show desktop button applet             */
+/******************************************/
+
+#PanelApplet > #showdesktop-button image,
+#PanelApplet > #showdesktop-button.toggle image {
+	padding: 0px 3px 0px 3px;
+}
+
+/******************************************/
+/*   Popup window    */
+/******************************************/
+
+#MatePanelPopupWindow {
+	background-color: @theme_bg_color;
+	border-image: none;
+	border: 1px solid @border_color;
+	box-shadow: inset -1px -1px @box_shadow_dark_color, inset 1px 1px @box_shadow_light_color;
+}
+
+#MatePanelPopupWindow expander {
+	border-style: none;
+}
+
+/* Weird, this sets the border color of the clockmap */
+#MatePanelPopupWindow > frame > box > box > box > widget {
+	color: @border_color;
+}
+
+/******************************************/
+/*   Slider applet    */
+/******************************************/
+
+.mate-panel-applet-slider {
+	background: transparent;
+}
+
+.mate-panel-applet-slider frame {
+	background-color: @theme_bg_color;
+	border-image: none;
+	border: 1px solid @border_color;
+	box-shadow: inset -1px -1px @box_shadow_dark_color, inset 1px 1px @box_shadow_light_color;
+}
+
+.mate-panel-applet-slider frame frame,
+.mate-panel-applet-slider frame > border {
+	background-color:transparent;
+	border-style: none;
+	box-shadow: none;
+}
+
+.mate-panel-applet-slider frame button {
+	color: @theme_fg_color;
+}
+
+/******************************************/
+/*   Advanced MATE menu    */
+/******************************************/
+
+#mate-menu {
+	border: 1px solid @border_color;
+}
+
+#mate-menu > widget > .horizontal {
+	padding: 5px;
+	box-shadow: inset -1px -1px @box_shadow_dark_color, inset 1px 1px @box_shadow_light_color;
+}
+
+#mate-menu scrolledwindow {
+	padding: 5px;
+	border: 1px solid @trough_bg_color;
+	box-shadow: inset 1px 1px @frame_groove_color, 1px 1px @frame_groove_color;
+}
+
+#mate-menu entry {
+	margin: 3px 0px;
+}
+
+/******************************************/
+/*   Brisk menu     */
+/******************************************/
+
+.brisk-menu > box {
+	border: 1px solid @border_color;
+	padding: 5px;
+	box-shadow: inset -1px -1px @box_shadow_dark_color, inset 1px 1px @box_shadow_light_color;
+}
+
+.brisk-menu > box > entry {
+	margin-bottom: 3px;
+}
+
+.brisk-menu > box > .horizontal > .vertical {
+	padding: 5px;
+	border: 1px solid @trough_bg_color;
+	margin-right: 3px;
+	box-shadow: inset 1px 1px @frame_groove_color, 1px 1px @frame_groove_color;
+}
+
+.brisk-menu > box > .horizontal > .vertical > scrolledwindow {
+	border: none;
+	box-shadow: none;
+}
+
+/******************************************/
+/*   Lock screen    */
+/******************************************/
+
+.lock-dialog frame {
+	background-color: @theme_bg_color;
+	border-image: none;
+	border: 1px solid @border_color;
+	padding: 0px;
+	margin: 0px;
+	box-shadow: inset -1px -1px @box_shadow_dark_color, inset 1px 1px @box_shadow_light_color;
+}
+
+.lock-dialog frame > border {
+	border: 0;
+}
+
+/* Set workspace switcher accent color */
+PanelApplet.wnck-applet .wnck-pager:selected {
+	background-color: @theme_selected_bg_color;
+}
+
+/******************************************/
+/*   Panel separator image    */
+/******************************************/
+MatePanelAppletFrameDBus > MatePanelAppletFrameDBus {
+	-gtk-icon-source: none;
+	background:
+		linear-gradient(@theme_bg_color, @theme_bg_color) 6px 0 / 1px calc(50% - 14px) no-repeat, /* Top overlay */
+		linear-gradient(@theme_bg_color, @theme_bg_color) 5px 0 / 1px calc(50% - 13px) no-repeat,
+		linear-gradient(@theme_bg_color, @theme_bg_color) 4px 0 / 1px calc(50% - 12px) no-repeat,
+		linear-gradient(@theme_bg_color, @theme_bg_color) 3px 0 / 1px calc(50% - 11px) no-repeat,
+		linear-gradient(@theme_bg_color, @theme_bg_color) 6px calc(100% + 11px) / 1px 50% no-repeat, /* Bottom overlay */
+		linear-gradient(@theme_bg_color, @theme_bg_color) 5px calc(100% + 12px) / 1px 50% no-repeat,
+		linear-gradient(@theme_bg_color, @theme_bg_color) 4px calc(100% + 13px) / 1px 50% no-repeat,
+		linear-gradient(@theme_bg_color, @theme_bg_color) 3px calc(100% + 14px) / 1px 50% no-repeat,
+		linear-gradient(to bottom, @grab_dark_color 1px, @grab_light_color 1px, @grab_light_color 2px, transparent 2px) 6px 1px / 1px 5px repeat-y,
+		linear-gradient(to bottom, @grab_dark_color 1px, @grab_light_color 1px, @grab_light_color 2px, transparent 2px) 5px 2px / 1px 5px repeat-y,
+		linear-gradient(to bottom, @grab_dark_color 1px, @grab_light_color 1px, @grab_light_color 2px, transparent 2px) 4px 3px / 1px 5px repeat-y,
+		linear-gradient(to bottom, @grab_dark_color 1px, @grab_light_color 1px, @grab_light_color 2px, transparent 2px) 3px 4px / 1px 5px repeat-y,
+		@theme_bg_color;
+}
+
+
+

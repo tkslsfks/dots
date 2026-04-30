@@ -1,0 +1,199 @@
+/**
+ * Bluecurve GTK 3/4 theme
+ * CSS shade definitions
+ *
+ * Copyright (C) 2024-2025 | neeeeow
+ * https://github.com/neeeeow/Bluecurve
+ *
+ * Forked from Blueshell:
+ *  Copyright (C) 2015-2016 | jpsb
+ *  Copyright (C) 2016-2018 | KlipKyle
+ *  Copyright (C) 2017-2018 | mrnhmath
+ *  Copyright (C) 2018 | Rakksor
+ *  https://github.com/Rakksor/Blueshell
+ *
+ * Some components of the following themes were used & modified:
+ *  Human GTK 3/4 theme:
+ *   Copyright (C) 2020-2024 | Fabrice Creuzot (luigifab)
+ *   https://github.com/luigifab/human-theme
+ *  TraditionalOK:
+ *   https://github.com/mate-desktop/mate-themes
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
+/*********************************************/
+/* Internal GTK shades */
+/*********************************************/
+
+@define-color theme_light_normal_color lighter(@theme_bg_color); /* light[NORMAL] */
+@define-color theme_dark_normal_color darker(@theme_bg_color);  /* dark[NORMAL] */
+
+@define-color theme_light_selected_color lighter(@theme_selected_bg_color); /* light[SELECTED] */
+@define-color theme_dark_selected_color darker(@theme_selected_bg_color);  /* dark[SELECTED] */
+
+/*********************************************/
+/* General shades */
+/*********************************************/
+
+@define-color darker_color @bg_active_color;
+@define-color separator_darker_color shade(@theme_bg_color, 0.896);
+@define-color trough_bg_color shade(@theme_bg_color, 0.85);
+@define-color entry_shadow_color shade(@theme_bg_color, 0.963);
+
+/**********************************************/
+/* Menu item colors */
+/**********************************************/
+
+@define-color menuitem_top_color shade(@theme_selected_bg_color, 0.9);
+@define-color menuitem_bottom_color shade(@theme_selected_bg_color, 1.2);
+
+@define-color menuitem_light_color shade(@theme_selected_bg_color, 1.62);
+@define-color menuitem_dark_color shade(@theme_selected_bg_color, 1.05);
+@define-color menuitem_border_color shade(@theme_selected_bg_color, 0.72);
+
+/**********************************************/
+/* Progress bar colors */
+/**********************************************/
+
+@define-color progressbar_top_color shade(@theme_selected_bg_color, 0.92);
+@define-color progressbar_bottom_color shade(@theme_selected_bg_color, 1.66);
+
+@define-color progressbar_light_color shade(@theme_selected_bg_color, 1.62);
+@define-color progressbar_dark_color shade(@theme_selected_bg_color, 0.72);
+@define-color progressbar_border_color shade(@theme_selected_bg_color, 1.05);
+
+/**********************************************/
+/* Border colors */
+/**********************************************/
+
+@define-color border_color shade(@theme_bg_color, 0.665);
+@define-color light_border_color shade(@theme_bg_color, 1.065);
+@define-color medium_border_color shade(@theme_bg_color, 0.7);
+@define-color darker_border_color shade(@theme_bg_color, 0.4);
+
+/*********************************************/
+/* Outline color */
+/*********************************************/
+
+@define-color outline_color shade(@theme_bg_color, 0.205);
+
+/*********************************************/
+/* Box shadow colors */
+/*********************************************/
+
+@define-color box_shadow_dark_color shade(@theme_bg_color, 0.896);
+@define-color box_shadow_light_color #ffffff;
+@define-color trough_box_shadow_color shade(@theme_bg_color, 0.768);
+
+/********************************************/
+/* Frame colors */
+/********************************************/
+@define-color frame_light_color #ffffff; /* this is always #ffffff */
+@define-color frame_groove_color shade(@theme_bg_color, 1.065);
+
+/*******************************************/
+/* Text color for entry:disabled */
+/*******************************************/
+@define-color entry_disabled_text #757575; /* this is always #757575 */
+
+/**********************************************/
+/* Button icon colors */
+/**********************************************/
+
+@define-color button_icon_color shade(@theme_bg_color, 0.205);
+@define-color button_icon_hover_color #000000;
+@define-color button_icon_disabled_color @insensitive_fg_color;
+@define-color button_icon_shadow_color @box_shadow_light_color;
+
+/************************************************/
+/* Grab elements (scrollbar, slider, separator) */
+/************************************************/
+
+@define-color grab_dark_color shade(@theme_bg_color, 0.665);
+@define-color grab_light_color #ffffff;
+
+/**********************************************/
+/* Check / radio colors */
+/**********************************************/
+
+@define-color check_background_color #ffffff;
+@define-color check_active_background_color @darker_color;
+@define-color check_color @theme_selected_bg_color;
+
+/**********************************************/
+/* Menu check / radio colors */
+/**********************************************/
+
+@define-color menu_check_color #000000;
+@define-color menu_check_hover_color #ffffff;
+@define-color menu_check_disabled_color @insensitive_fg_color;
+
+/**********************************************/
+/* CSDs */
+/**********************************************/
+
+@define-color wm_shadow alpha(black, 0.5);
+@define-color wm_border black;
+
+/* Tint colors */
+@define-color prelight_tint alpha(@theme_light_normal_color, 0.5);
+@define-color darken_tint alpha(mix(@theme_dark_selected_color, @theme_dark_normal_color, 0.75), 0.25);
+
+/* Gradient and border for striped area of headerbar */
+@define-color headerbar_active_1 mix(@theme_light_normal_color, @theme_selected_bg_color, 0.8);
+@define-color headerbar_active_2 mix(@theme_light_normal_color, @theme_selected_bg_color, 0.95); 
+@define-color headerbar_active_3 mix(@theme_light_normal_color, @theme_selected_bg_color, 1); 
+@define-color headerbar_active_top mix(@theme_light_normal_color, @theme_light_selected_color, 0.75);
+@define-color headerbar_active_bottom shade(@theme_selected_bg_color, 0.1);
+
+/* Gradient and border for outer area of headerbar */
+@define-color headerbar_active_outer_1 mix(@theme_selected_bg_color, @theme_bg_color, 0.75);
+@define-color headerbar_active_outer_2 mix(@theme_light_selected_color, @theme_light_normal_color, 0.75);
+@define-color headerbar_active_outer_bottom mix(@theme_dark_normal_color, @theme_selected_bg_color, 0.5);
+@define-color headerbar_active_outer_side mix(@theme_selected_bg_color, #000000, 0.4);
+
+/* Text colors */
+@define-color headerbar_active_text @theme_selected_fg_color;
+@define-color headerbar_active_text_shadow mix(@theme_selected_bg_color, #000000, 0.4);
+
+/* Button colors */
+@define-color headerbar_active_button alpha(@theme_dark_selected_color, 0.75);
+@define-color headerbar_active_button_border mix(@theme_dark_normal_color, @theme_selected_bg_color, 0.3);
+@define-color headerbar_active_button_1 mix(@theme_light_normal_color, @theme_light_selected_color, 0.2);
+@define-color headerbar_active_button_2 mix(@theme_light_normal_color, @theme_light_selected_color, 0.1);
+@define-color headerbar_active_button_shadow_light mix(@theme_light_normal_color, @theme_light_selected_color, 0.05);
+@define-color headerbar_active_button_shadow_dark mix(@theme_bg_color, @theme_selected_bg_color, 0.15);
+
+/* Button hover colors */
+@define-color headerbar_active_button_hover alpha(mix(@theme_light_normal_color, @theme_dark_selected_color, 1.25), 0.75);
+@define-color headerbar_active_button_hover_border mix(@theme_dark_normal_color, @theme_selected_bg_color, 0.7);
+
+/* Button active colors */
+@define-color headerbar_active_button_active alpha(shade(@theme_dark_selected_color, 0.8), 0.75);
+@define-color headerbar_active_button_active_border mix(@theme_dark_selected_color, @theme_dark_normal_color, 0.75);
+
+/* Inactive headerbar gradient and border */
+@define-color headerbar_backdrop_1 mix(@theme_light_normal_color, @theme_bg_color, 0.95);
+@define-color headerbar_backdrop_2 mix(@theme_bg_color, @theme_dark_normal_color, 0.2);
+@define-color headerbar_backdrop_3 mix(@theme_bg_color, @theme_dark_normal_color, 0.3);
+@define-color headerbar_backdrop_top shade(@insensitive_bg_color, 1.2);
+@define-color headerbar_backdrop_bottom mix(@theme_dark_normal_color, @theme_bg_color, 0.5);
+
+/* Inactive headerbar button colors */
+@define-color headerbar_backdrop_button alpha(@insensitive_fg_color, 0.75);
+@define-color headerbar_backdrop_button_border mix(@theme_dark_normal_color, @theme_bg_color, 0.4);
+@define-color headerbar_backdrop_button_1 mix(@theme_light_normal_color, @theme_bg_color, 0.7);
+@define-color headerbar_backdrop_button_2 mix(@theme_light_normal_color, @theme_bg_color, 0.9);
+
